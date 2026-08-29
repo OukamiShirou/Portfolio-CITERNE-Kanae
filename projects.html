@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projets — Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Mon Portfolio</h1>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projects.html" class="active">Projets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:1rem">
+    <h2>Projets sélectionnés</h2>
+
+    <section class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem">
+      <article class="card">
+        <h3>Projet 1 — Application web</h3>
+        <p class="muted">Description courte du projet, technologies utilisées : HTML, CSS, JavaScript.</p>
+        <p><a class="btn" href="#">Détails</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Projet 2 — API</h3>
+        <p class="muted">API REST pour gérer des ressources, tests et documentation.</p>
+        <p><a class="btn" href="#">Détails</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Projet 3 — PWA</h3>
+        <p class="muted">Progressive Web App avec mise en cache et offline-first.</p>
+        <p><a class="btn" href="#">Détails</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 — Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
