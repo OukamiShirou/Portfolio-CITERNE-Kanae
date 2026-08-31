@@ -25,18 +25,38 @@
       <h2>Contact</h2>
       <p>Vous pouvez me contacter via le formulaire ci-dessous (statique) ou par email à l'adresse <a href="mailto:kanae.citerne@outlook.fr">kanae.citerne@outlook.fr</a>.</p>
 
-      <form action="mailto:kanae.citerne@outlook.fr" method="post" enctype="text/plain">
-        <label for="name">Nom</label>
-        <input id="name" name="name" type="text" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
+      <form id="contactForm">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)"></textarea>
+          <label for="subject">Objet</label>
+          <input id="subject" name="subject" type="text" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
 
-        <p><button class="btn" type="submit">Envoyer</button></p>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)"></textarea>
+
+          <p><button class="btn" type="submit">Envoyer</button></p>
       </form>
+
+      <script>
+        (function(){
+          var form = document.getElementById('contactForm');
+          if (!form) return;
+          form.addEventListener('submit', function(e){
+            e.preventDefault();
+            var name = encodeURIComponent(document.getElementById('name').value || '');
+            var email = encodeURIComponent(document.getElementById('email').value || '');
+            var message = encodeURIComponent(document.getElementById('message').value || '');
+            var subject = encodeURIComponent(document.getElementById('subject').value || '');
+            var body = encodeURIComponent(message + '\n\nEnvoyé par: ' + (name || '') + (email ? ' <' + email + '>' : ''));
+            var mailto = 'mailto:kanae.citerne@outlook.fr?subject=' + subject + '&body=' + body;
+            window.location.href = mailto;
+          });
+        })();
+      </script>
     </section>
   </main>
 
