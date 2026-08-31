@@ -21,7 +21,6 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.5;
-    /* sticky footer layout */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -101,6 +100,10 @@ body {
     text-decoration: none
 }
 
+.card .btn {
+    margin: .5rem 0; 
+}
+
 .btn-outline {
     background: transparent;
     color: var(--text);
@@ -141,7 +144,6 @@ body {
 }
 
 .hero-image {
-    /* Forcer un carré fixe et display:block pour éviter la déformation par des règles globales */
     width: 320px !important;
     height: 320px !important;
     max-width: 320px !important;
@@ -151,7 +153,6 @@ body {
     border-radius: 50%;
     border: 1px solid rgba(255,255,255,.06);
     box-shadow: 0 10px 30px rgba(0,0,0,.5);
-    /* Désactiver toute animation/transition sur l'image */
     animation: none !important;
     transition: none !important;
     transform: none !important;
@@ -207,4 +208,11 @@ body {
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,.03)
+}
+
+/* Ensure lists inside cards are indented and markers are inside the card frame */
+.card ul {
+    padding-left: 1.25rem;
+    list-style-position: inside;
+    margin-top: 0.5rem;
 }
