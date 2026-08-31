@@ -1,5 +1,5 @@
 :root {
-    --bg: #0b0b0c;
+    --bg: linear-gradient(180deg, #161616 0%, #370606 100%);
     --surface: #111214;
     --accent: #c62828;
     --muted: #9aa0a6;
@@ -34,7 +34,7 @@ body {
 }
 
 .site-header {
-    background: linear-gradient(90deg,rgba(0,0,0,.4),rgba(0,0,0,.2));
+    background: #000000;
     border-bottom: 1px solid rgba(255,255,255,.03)
 }
 
@@ -101,14 +101,80 @@ body {
     text-decoration: none
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    color: var(--text);
+    margin-bottom: .25rem;
+}
+
+.hero-role {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.hero-intro {
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    max-width: 55ch;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    /* Forcer un carré fixe et display:block pour éviter la déformation par des règles globales */
+    width: 320px !important;
+    height: 320px !important;
+    max-width: 320px !important;
+    display: block;
+    align-self: center;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    /* Désactiver toute animation/transition sur l'image */
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+.hero-image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
 
 .site-footer {
     border-top: 1px solid rgba(255,255,255,.03);
     padding: 1rem 0;
     margin-top: auto;
     color: var(--muted);
-    text-align: center;
 }
+
+    .site-footer .container {
+        text-align: center;
+    }
 
 /* Responsive */
 @media (max-width:700px) {
@@ -119,6 +185,19 @@ body {
     .menu-toggle {
         display: block;
         margin-left: auto
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 320px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin-top: 1rem;
     }
 }
 
