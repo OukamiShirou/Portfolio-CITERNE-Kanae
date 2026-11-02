@@ -2,58 +2,94 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projets — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Projets de CITERNE Kanae - Apprentie développeuse" />
+  <title>Projets — CITERNE Kanae</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">CITERNE Kanae</h1>
+    <div class="header-container">
+      <div class="logo-section">
+        <h1 class="logo">
+          <span class="logo-emoji">💻</span>
+          CITERNE Kanae
+        </h1>
+      </div>
       <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="projects.html" class="active">Projets</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="about.html" class="nav-link">À propos</a>
+        <a href="projects.html" class="nav-link active">Projets</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
     </div>
   </header>
 
-  <main class="container" style="padding-top:1rem">
-    <h2>Liste de différents projets</h2>
+  <!-- Mobile Nav -->
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Accueil</a>
+    <a href="about.html" class="mobile-nav-link">À propos</a>
+    <a href="projects.html" class="mobile-nav-link active">Projets</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
 
-    <section class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem">
-      <article class="card">
-        <h3>Site vitrine</h3>
-        <p class="muted">Technologies utilisées : HTML, CSS, JavaScript. CE site est une simple site internet réalisé pour la première année de mon BTS en tant que projet de début d'année.</p>
-        <p><a class="btn" href="https://oukamishirou.github.io/Fan-Page-Arlecchino/" target="_blank" rel="noopener noreferrer">Lien</a></p>
-      </article>
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="projects-section">
+      <div class="container">
+        <h1 class="section-title">Mes Projets</h1>
+        <p class="section-desc">Découvrez une sélection de mes différents projets réalisés lors de ma formation.</p>
 
-      <article class="card">
-        <h3>Jeu de poker</h3>
-        <p class="muted">Développement d'un jeu de poker en C# premierement avec un affichage via la console puis en utilisant la solution Windows Forms.</p>
-        <p><a class="btn" href="assets/files/AP POKER Console.pdf" target="_blank" rel="noopener noreferrer">Sujet console</a></p>
-        <p><a class="btn" href="assets/files/AP POKER POO & Windows Forms.pdf" target="_blank" rel="noopener noreferrer">Sujet Windows Forms</a></p>
-      </article>
+        <div class="projects-grid">
+          <article class="card">
+            <h3>Site vitrine</h3>
+            <p>Technologies utilisées : HTML, CSS, JavaScript. Ce site est un simple site internet réalisé pour la première année de mon BTS en tant que projet de début d'année.</p>
+            <p style="margin-top: var(--spacing-md);">
+              <a class="btn btn-primary" href="https://oukamishirou.github.io/Fan-Page-Arlecchino/" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+            </p>
+          </article>
 
-      <article class="card">
-        <h3>Chiffrement</h3>
-        <p class="muted">Développement d'un codeur/décodeur console en C#.</p>
-        <p><a class="btn" href="assets/files/CHIFFREMENT.pdf" target="_blank" rel="noopener noreferrer">Sujet</a></p>
-      </article>
+          <article class="card">
+            <h3>Jeu de poker</h3>
+            <p>Développement d'un jeu de poker en C# d'abord avec un affichage via la console puis en utilisant la solution Windows Forms.</p>
+            <p style="margin-top: var(--spacing-md);">
+              <a class="btn btn-primary" href="assets/files/AP POKER Console.pdf" target="_blank" rel="noopener noreferrer">Console</a>
+              <a class="btn btn-secondary" href="assets/files/AP POKER POO & Windows Forms.pdf" target="_blank" rel="noopener noreferrer" style="margin-left: var(--spacing-sm);">Windows Forms</a>
+            </p>
+          </article>
 
-      <article class="card">
-          <h3>Carte grises</h3>
-          <p class="muted">Développpement d'une application de gestion des cartes grises en PHP, HTML, CSS, JavaScript, et base de données MySQL.</p>
-          <p><a class="btn" href="assets/files/Cartes_Grises.pdf" target="_blank" rel="noopener noreferrer">Sujet</a></p>
-      </article>
+          <article class="card">
+            <h3>Chiffrement</h3>
+            <p>Développement d'un codeur/décodeur console en C#.</p>
+            <p style="margin-top: var(--spacing-md);">
+              <a class="btn btn-primary" href="assets/files/CHIFFREMENT.pdf" target="_blank" rel="noopener noreferrer">Voir le sujet</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Carte grises</h3>
+            <p>Développement d'une application de gestion des cartes grises en PHP, HTML, CSS, JavaScript, et base de données MySQL.</p>
+            <p style="margin-top: var(--spacing-md);">
+              <a class="btn btn-primary" href="assets/files/Cartes_Grises.pdf" target="_blank" rel="noopener noreferrer">Voir le sujet</a>
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
     <div class="container">
-    <p>© 2026 — CITERNE Kanae. Tous droits réservés.</p>
+      <div class="footer-content">
+        <p>&copy; 2026 — CITERNE Kanae. Tous droits réservés.</p>
+        <p class="footer-tagline">Portfolio créé avec passion et dévouement</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" id="back-to-top" class="footer-link">Retour en haut ↑</a>
+      </div>
     </div>
   </footer>
 

@@ -2,50 +2,78 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>À propos — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="À propos de CITERNE Kanae - Apprentie développeuse" />
+  <title>À propos — CITERNE Kanae</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">CITERNE Kanae</h1>
+    <div class="header-container">
+      <div class="logo-section">
+        <h1 class="logo">
+          <span class="logo-emoji">💻</span>
+          CITERNE Kanae
+        </h1>
+      </div>
       <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="about.html" class="active">À propos</a>
-        <a href="projects.html">Projets</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="about.html" class="nav-link active">À propos</a>
+        <a href="projects.html" class="nav-link">Projets</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="card" style="margin-top:1rem">
-      <h2>À propos de moi</h2>
-      <p>Étant passionnée d'informatique depuis mon plus jeune âge, j'ai optée pour une formation en développement afin d'approfondir mes compétences en back-end et découvrir le front-end.</p>
+  <!-- Mobile Nav -->
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Accueil</a>
+    <a href="about.html" class="mobile-nav-link active">À propos</a>
+    <a href="projects.html" class="mobile-nav-link">Projets</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
 
-      <h3>Compétences</h3>
-      <ul>
-        <li>HTML / CSS</li>
-        <li>Base de données (MySQL)</li>
-        <li>JavaScript</li>
-        <li>PHP</li>
-        <li>Python</li>
-      </ul>
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="about-section">
+      <div class="container">
+        <h1 class="section-title">À propos de moi</h1>
 
-      <h3>Formation</h3>
-      <p>BTS SIO — Option SLAM (spécialité développement)</p>
+        <div class="card">
+          <p>Étant passionnée d'informatique depuis mon plus jeune âge, j'ai opté pour une formation en développement afin d'approfondir mes compétences en back-end et découvrir le front-end.</p>
 
-      <p style="margin-top:1rem">
-        <a class="btn" href="assets/files/CV_2026.pdf" target="_blank" rel="noopener noreferrer">Voir mon CV</a>
-      </p>
+          <h2>Compétences</h2>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>Base de données (MySQL)</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Python</li>
+          </ul>
+
+          <h2>Formation</h2>
+          <p>BTS SIO — Option SLAM (spécialité développement)</p>
+
+          <div style="margin-top: var(--spacing-xl);">
+            <a class="btn btn-primary" href="assets/files/CV_2027.pdf" target="_blank" rel="noopener noreferrer">Voir mon CV</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
     <div class="container">
-    <p>© 2026 — CITERNE Kanae. Tous droits réservés.</p>
+      <div class="footer-content">
+        <p>&copy; 2026 — CITERNE Kanae. Tous droits réservés.</p>
+        <p class="footer-tagline">Portfolio créé avec passion et dévouement</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" id="back-to-top" class="footer-link">Retour en haut ↑</a>
+      </div>
     </div>
   </footer>
 

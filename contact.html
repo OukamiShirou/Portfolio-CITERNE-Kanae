@@ -2,67 +2,152 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact CITERNE Kanae - Apprentie développeuse" />
+  <title>Contact — CITERNE Kanae</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .form-group {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+      color: var(--text);
+      font-size: var(--font-size-sm);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      font-family: var(--font-family);
+      font-size: var(--font-size-base);
+      transition: var(--transition);
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .form-submit {
+      margin-top: var(--spacing-xl);
+    }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">CITERNE Kanae</h1>
+    <div class="header-container">
+      <div class="logo-section">
+        <h1 class="logo">
+          <span class="logo-emoji">💻</span>
+          CITERNE Kanae
+        </h1>
+      </div>
       <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="projects.html">Projets</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="about.html" class="nav-link">À propos</a>
+        <a href="projects.html" class="nav-link">Projets</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
       </nav>
-      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
     </div>
   </header>
 
-  <main class="container" style="padding-top:1rem">
-    <section class="card">
-      <h2>Contact</h2>
-      <p>Vous pouvez me contacter via le formulaire ci-dessous (statique) ou par email à l'adresse <a href="mailto:kanae.citerne@outlook.fr">kanae.citerne@outlook.fr</a>.</p>
+  <!-- Mobile Nav -->
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link">Accueil</a>
+    <a href="about.html" class="mobile-nav-link">À propos</a>
+    <a href="projects.html" class="mobile-nav-link">Projets</a>
+    <a href="contact.html" class="mobile-nav-link active">Contact</a>
+  </nav>
 
-      <form id="contactForm">
-          <label for="name">Nom</label>
-          <input id="name" name="name" type="text" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="contact-section">
+      <div class="container">
+        <h1 class="section-title">Contact</h1>
+        <p class="section-desc">Vous pouvez me contacter via le formulaire ci-dessous ou directement par email.</p>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+          <p style="margin-bottom: var(--spacing-lg); color: var(--text-secondary);">
+            Email : <a href="mailto:kanae.citerne@outlook.fr" style="color: var(--accent); text-decoration: none;">kanae.citerne@outlook.fr</a>
+          </p>
 
-          <label for="subject">Objet</label>
-          <input id="subject" name="subject" type="text" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)" />
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" required />
+            </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" style="width:100%;margin:.5rem 0;padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.04);background:transparent;color:var(--text)"></textarea>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
 
-          <p><button class="btn" type="submit">Envoyer</button></p>
-      </form>
+            <div class="form-group">
+              <label for="subject">Objet</label>
+              <input id="subject" name="subject" type="text" required />
+            </div>
 
-      <script>
-        (function(){
-          var form = document.getElementById('contactForm');
-          if (!form) return;
-          form.addEventListener('submit', function(e){
-            e.preventDefault();
-            var name = encodeURIComponent(document.getElementById('name').value || '');
-            var email = encodeURIComponent(document.getElementById('email').value || '');
-            var message = encodeURIComponent(document.getElementById('message').value || '');
-            var subject = encodeURIComponent(document.getElementById('subject').value || '');
-            var body = encodeURIComponent(message + '\n\nEnvoyé par: ' + (name || '') + (email ? ' <' + email + '>' : ''));
-            var mailto = 'mailto:kanae.citerne@outlook.fr?subject=' + subject + '&body=' + body;
-            window.location.href = mailto;
-          });
-        })();
-      </script>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button class="btn btn-primary" type="submit" style="width: 100%;">Envoyer</button>
+            </div>
+          </form>
+
+          <script>
+            (function(){
+              var form = document.getElementById('contactForm');
+              if (!form) return;
+              form.addEventListener('submit', function(e){
+                e.preventDefault();
+                var name = encodeURIComponent(document.getElementById('name').value || '');
+                var email = encodeURIComponent(document.getElementById('email').value || '');
+                var message = encodeURIComponent(document.getElementById('message').value || '');
+                var subject = encodeURIComponent(document.getElementById('subject').value || '');
+                var body = encodeURIComponent(message + '\n\nEnvoyé par: ' + (name || '') + (email ? ' <' + email + '>' : ''));
+                var mailto = 'mailto:kanae.citerne@outlook.fr?subject=' + subject + '&body=' + body;
+                window.location.href = mailto;
+              });
+            })();
+          </script>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
     <div class="container">
-    <p>© 2026 — CITERNE Kanae. Tous droits réservés.</p>
+      <div class="footer-content">
+        <p>&copy; 2026 — CITERNE Kanae. Tous droits réservés.</p>
+        <p class="footer-tagline">Portfolio créé avec passion et dévouement</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" id="back-to-top" class="footer-link">Retour en haut ↑</a>
+      </div>
     </div>
   </footer>
 

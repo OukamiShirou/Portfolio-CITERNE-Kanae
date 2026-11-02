@@ -2,45 +2,110 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio de CITERNE Kanae - Apprentie développeuse" />
+  <title>Portfolio — CITERNE Kanae</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">CITERNE Kanae</h1>
+    <div class="header-container">
+      <div class="logo-section">
+        <h1 class="logo">
+          <span class="logo-emoji">💻</span>
+          CITERNE Kanae
+        </h1>
+      </div>
       <nav class="main-nav">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="projects.html">Projets</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="nav-link active">Accueil</a>
+        <a href="about.html" class="nav-link">À propos</a>
+        <a href="projects.html" class="nav-link">Projets</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Menu">☰</button>
     </div>
   </header>
 
-  <main class="container hero">
-    <div class="hero-content">
-      <section class="hero-text">
-        <h1 class="hero-title">CITERNE Kanae</h1>
-        <p class="hero-role">Apprentie développeuse — Projets &amp; CV</p>
-        <p class="hero-intro">Bienvenue sur mon portfolio. Vous trouverez ici une sélection de projets, mes compétences et mes coordonnées.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="projects.html">Voir mes projets</a>
-          <a class="btn btn-outline" href="about.html">En savoir plus</a>
-        </div>
-      </section>
+  <!-- Mobile Nav -->
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="index.html" class="mobile-nav-link active">Accueil</a>
+    <a href="about.html" class="mobile-nav-link">À propos</a>
+    <a href="projects.html" class="mobile-nav-link">Projets</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  </nav>
 
-      <div class="hero-image-wrap">
-        <img class="hero-image" src="assets/images/img_index.png" alt="Photo de profil">
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">CITERNE Kanae</h1>
+            <p class="hero-subtitle">Apprentie Développeuse</p>
+            <p class="hero-role">Projets &amp; Portfolio</p>
+            <p class="hero-intro">
+              Bienvenue sur mon portfolio. Vous trouverez ici une sélection de mes projets, 
+              mes compétences et mes coordonnées pour entrer en contact.
+            </p>
+            <div class="hero-ctas">
+              <a href="projects.html" class="btn btn-primary">Voir mes projets</a>
+              <a href="about.html" class="btn btn-secondary">En savoir plus</a>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <img class="hero-image" src="assets/images/img_index.png" alt="Photo de profil">
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+      <div class="container">
+        <h2 class="section-title">À Propos</h2>
+        <p class="section-desc">
+          Découvrez qui je suis et ma parcours en développement web et logiciel.
+        </p>
+        <a href="about.html" class="link-arrow">Lire la suite →</a>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects">
+      <div class="container">
+        <h2 class="section-title">Projets en Vedette</h2>
+        <p class="section-desc">
+          Consultez une sélection de mes travaux les plus récents et les plus intéressants.
+        </p>
+        <a href="projects.html" class="btn btn-primary">Voir tous les projets</a>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Vous avez un projet?</h2>
+          <p>N'hésitez pas à me contacter pour discuter de vos idées ou collaborer.</p>
+          <a href="contact.html" class="btn btn-primary">Me contacter</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
     <div class="container">
-    <p>© 2026 — CITERNE Kanae. Tous droits réservés.</p>
+      <div class="footer-content">
+        <p>&copy; 2026 — CITERNE Kanae. Tous droits réservés.</p>
+        <p class="footer-tagline">Portfolio créé avec passion et dévouement</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" id="back-to-top" class="footer-link">Retour en haut ↑</a>
+      </div>
     </div>
   </footer>
 
